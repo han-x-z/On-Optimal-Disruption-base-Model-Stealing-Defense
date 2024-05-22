@@ -108,10 +108,10 @@ def main():
                     labels_list.append(labels)
                     out_list.append(out)
             out_all = torch.stack(out_list, dim=0)
-            # 检查OOD样本
+
             for i in range(inputs.shape[0]):
-                unique_labels = torch.unique(torch.stack([labels[i] for labels in labels_list]))  # 获取唯一标签
-                if len(unique_labels) > 1:  # 如果有多个唯一标签，它是OOD
+                unique_labels = torch.unique(torch.stack([labels[i] for labels in labels_list]))
+                if len(unique_labels) > 1:
                     blackbox.ood_count += 1
                     blackbox.ood_samples.append(x[i])
                     blackbox.queryset_ood_data_list.append(queryset.data[i])
