@@ -1,4 +1,4 @@
-# On Optimal Disruption-base Model Stealing Defense
+# On Optimal Disruption-base Model Stealing Defenses
 
 ## Environment
 
