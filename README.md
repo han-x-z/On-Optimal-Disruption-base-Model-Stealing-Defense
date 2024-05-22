@@ -279,7 +279,13 @@ out_dir = f"models/final_bb_dist/{p_v}-{f_v}/{policy}{policy_suffix}-{queryset}-
 # Parameters to defense strategy, provided as a key:value pair string.
 defense_args = f"'out_path:{out_dir}'"
 ```
+You can test the Impact of the FNR of Detector in the code:
 
+```shell
+generator_ratio = 1.0     #TODO
+```
+
+#### 
 #### Evaluate the Protected Model
 
 You can get the protected accuracy of the target model defended by the specified defense method by running the following command:
