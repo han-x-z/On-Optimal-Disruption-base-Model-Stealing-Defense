@@ -357,7 +357,7 @@ def main():
 
     print('=> constructing transfer set...')
     transferset = adversary.get_transferset(params['budget'], params['nqueries'], queries_per_image=params['qpi'],only_recovery=only_recovery)
-    transfer_out_path = osp.join(out_path, 'transferset1.pickle')
+    transfer_out_path = osp.join(out_path, 'transferset.pickle')
     with open(transfer_out_path, 'wb') as wf:
         torch.save(transferset,wf) # there exist some issues of using pickle to dump tensors with multiprocessing, we use torch instead
         #pickle.dump(transferset, wf)
