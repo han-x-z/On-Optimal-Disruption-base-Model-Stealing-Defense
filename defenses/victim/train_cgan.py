@@ -29,7 +29,6 @@ from defenses.victim import *
 
 
 def main():
-    # 解析命令行参数
     parser = argparse.ArgumentParser(description='Construct transfer set')
     parser.add_argument('victim_model_dir', metavar='PATH', type=str,
                         help='Path to victim model. Should contain files "model_best.pth.tar" and "params.json"')
