@@ -39,7 +39,7 @@ if not (os.path.exists(os.path.join(proj_path,vic_dir,'checkpoint.pth.tar'))
 
 query_list = ['random','jbtr3']
 attack_list = ['naive','ddae']
-defense_list = ['none','rs','mad','am','edm','fake'] 
+defense_list = ['none','rs','mad','am','fake','edm'] 
 
 for policy in query_list:
     if policy == 'jbtr3':
